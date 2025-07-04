@@ -70,7 +70,7 @@ body {
     height: 60px;
     background-color: grey;
     border-radius: 50%;
-    transform: rotate(var(--angle)) translate(140px);
+    transform: rotate(var(--angle)) translate(200px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,6 +79,7 @@ body {
 
 /* Label inside each circle stays upright */
 .circle-label {
+    animation: counterRotate 6s linear infinite;
     transform: rotate(calc(-1 * var(--angle)));
     font-size: 0.75rem;
     color: white;
