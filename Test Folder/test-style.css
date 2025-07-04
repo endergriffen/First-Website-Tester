@@ -25,11 +25,11 @@ body{
     box-shadow: 0 0 3em white;
 }
 
-.apple, .orange, .bannanna, .grape, .rasberry, .blueberry, .grapefruit, .dragonfruit, .lemon{
+.apple, .orange, .bannanna, .grape, .rasberry, .blueberry, .grapefruit, .dragonfruit, .lemon {
     position: absolute;
     border-style: solid;
-    border-color: white transparent transparent transparent;
-    border-width: 0.1em 0.1em 0 0;
+    border-color: red blue green yellow;
+    border-width: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 50%;
 }
 
@@ -38,7 +38,15 @@ body{
     left: 5em;
     width: 30em;
     height: 30em;
-    /* animation: orbit 36.5s linear infinite; */
+    animation: orbit 36.5s linear infinite;
+}
+
+.orange {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: orbit 36.5s linear infinite;
 }
 
     .apple::before, .orange::before, .bannanna::before, .grape::before, .rasberry::before, .blueberry::before, .grapefruit::before, .dragonfruit::before, .lemon::before{
@@ -52,13 +60,19 @@ body{
         right: 2.8em;
         width: 3em;
         height: 3em;
-        background-color: grey;
+        background-color: red;
     }
 
-    /*
+    .orange::before {
+        top: 9.8em;
+        right: -1.3em;
+        width: 3em;
+        height: 3em;
+        background-color: orange;
+    }
+
     @keyframes orbit{
         to{
             transform: rotate(360deg);
         }
     }
-    */
