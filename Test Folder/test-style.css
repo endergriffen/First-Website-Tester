@@ -12,6 +12,8 @@ body{
     width: 40em;
     height: 40em;
     position: relative;
+    background: url('your-image.png') center center no-repeat;
+    background-size: cover; /* or 'contain' depending on your needs */
 }
 
 .Back{
