@@ -79,7 +79,6 @@ body {
 
 /* Label inside each circle stays upright */
 .circle-label {
-    animation: counterRotate 6s linear infinite;
     transform: rotate(calc(-1 * var(--angle)));
     font-size: 0.75rem;
     color: white;
