@@ -13,7 +13,7 @@ body{
     height: 40em;
     position: relative;
     background: url('example.png') center center no-repeat;
-    background-size: cover; /* or 'contain' depending on your needs */
+    background-size: cover;
 }
 
 .Back{
@@ -36,72 +36,72 @@ body{
 }
 
 .apple {
-    top: -1.8em;
-    left: 13.9em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .orange {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .bannanna {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .grape {
-    top: -1.8em;
-    left: 13.9em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .rasberry {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .blueberry {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .grapefruit {
-    top: -1.8em;
-    left: 13.9em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .dragonfruit {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
 }
 
 .lemon {
-    top: 1.5em;
-    left: 4.1em;
+    top: 5em;
+    left: 5em;
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
@@ -114,7 +114,7 @@ body{
     }
 
     .apple::before{
-        top: 2.8em;
+        top: -1.8em;
         right: 2.8em;
         width: 3em;
         height: 3em;
@@ -122,23 +122,23 @@ body{
     }
 
     .orange::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: orange;
     }
 
     .bannanna::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: yellow;
     }
 
     .grape::before{
-        top: 2.8em;
+        top: -1.8em;
         right: 2.8em;
         width: 3em;
         height: 3em;
@@ -146,23 +146,23 @@ body{
     }
 
     .rasberry::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: pink;
     }
 
     .blueberry::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: blue;
     }
 
     .grapefruit::before{
-        top: 2.8em;
+        top: -1.8em;
         right: 2.8em;
         width: 3em;
         height: 3em;
@@ -170,16 +170,16 @@ body{
     }
 
     .dragonfruit::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: brown;
     }
 
     .lemon::before {
-        top: 9.8em;
-        right: -1.3em;
+        top: 1.5em;
+        right: 4.1em;
         width: 3em;
         height: 3em;
         background-color: lemonchiffon;
