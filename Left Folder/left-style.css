@@ -1,4 +1,5 @@
 /* #3498db */
+/* Background color for the left page */
 body {
     display: flex;
     justify-content: center;
@@ -8,12 +9,14 @@ body {
     background-color: #3498db;
 }
 
+/* Wrapper for button and orbiting circles */
 .button-wrapper {
     position: relative;
     width: 300px;
     height: 300px;
 }
 
+/* Central back button */
 .back-button {
     position: absolute;
     top: 50%;
@@ -36,16 +39,51 @@ body {
         transform: translate(-50%, -50%) scale(1.1);
     }
 
-/* Decorative grey circles */
+/* Orbit container: rotates all circles around the center */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    animation: rotateOrbit 6s linear infinite;
+    z-index: 1;
+}
+
+/* Rotation animation for the orbit */
+@keyframes rotateOrbit {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Decorative circles inside the orbit */
 .decorative-circle {
     position: absolute;
     width: 60px;
     height: 60px;
     background-color: grey;
     border-radius: 50%;
-    z-index: 1;
+    animation: counterRotate 6s linear infinite;
 }
 
+/* Counter-rotation animation */
+@keyframes counterRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Positioning each circle */
 .top {
     top: 0;
     left: 50%;
@@ -68,25 +106,4 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%);
-    animation: rotateOrbit 6s linear infinite;
-    z-index: 1; /* Behind the button */
-}
-
-@keyframes rotateOrbit {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
 }
