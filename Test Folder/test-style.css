@@ -39,6 +39,7 @@ body{
     width: 30em;
     height: 30em;
     animation: orbit 36.5s linear infinite;
+    transform: rotate(-90deg); /* Start at angle 0 (rightmost) */
 }
 
 .orange {
