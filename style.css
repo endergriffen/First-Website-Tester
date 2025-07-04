@@ -23,6 +23,10 @@ html, body {
     cursor: pointer;
     background-color: gray;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .left-button {
@@ -35,5 +39,5 @@ html, body {
 
 .split-button:hover {
     opacity: 0.85;
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
