@@ -28,9 +28,14 @@ body{
 .apple, .orange, .bannanna, .grape, .rasberry, .blueberry, .grapefruit, .dragonfruit, .lemon {
     position: absolute;
     border-style: solid;
-    border-color: red blue green yellow;
+    border-color: transparent transparent transparent transparent;
     border-width: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
 }
 
 .apple {
@@ -188,3 +193,40 @@ body{
             transform: rotate(360deg);
         }
     }
+
+.apple:focus-visible,
+.orange:focus-visible,
+.bannanna:focus-visible,
+.grape:focus-visible,
+.rasberry:focus-visible,
+.blueberry:focus-visible,
+.grapefruit:focus-visible,
+.dragonfruit:focus-visible,
+.lemon:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+button.Back,
+button.apple,
+button.orange,
+button.bannanna,
+button.grape,
+button.rasberry,
+button.blueberry,
+button.grapefruit,
+button.dragonfruit,
+button.lemon {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    /* Prevents default button styles from interfering */
+}
+
+button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
