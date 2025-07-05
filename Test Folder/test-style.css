@@ -12,8 +12,6 @@ body{
     width: 40em;
     height: 40em;
     position: relative;
-    background: url('example.png') center center no-repeat;
-    background-size: cover;
 }
 
 .Back{
@@ -115,7 +113,7 @@ body{
 
     .apple::before{
         top: -1.8em;
-        right: 2.8em;
+        right: 14em;
         width: 3em;
         height: 3em;
         background-color: red;
@@ -130,56 +128,56 @@ body{
     }
 
     .bannanna::before {
-        top: 1.5em;
-        right: 4.1em;
+        top: 10.3em;
+        right: -1.3em;
         width: 3em;
         height: 3em;
         background-color: yellow;
     }
 
     .grape::before{
-        top: -1.8em;
-        right: 2.8em;
+        top: 20.9em;
+        right: 0.2em;
         width: 3em;
         height: 3em;
         background-color: purple;
     }
 
     .rasberry::before {
-        top: 1.5em;
-        right: 4.1em;
+        top: 27.78em;
+        right: 8.65em;
         width: 3em;
         height: 3em;
         background-color: pink;
     }
 
     .blueberry::before {
-        top: 1.5em;
-        right: 4.1em;
+        top: 27.78em;
+        right: 19.25em;
         width: 3em;
         height: 3em;
         background-color: blue;
     }
 
     .grapefruit::before{
-        top: -1.8em;
-        right: 2.8em;
+        top: 20.5em;
+        right: 26.9em;
         width: 3em;
         height: 3em;
         background-color: green;
     }
 
     .dragonfruit::before {
-        top: 1.5em;
-        right: 4.1em;
+        top: 10.5em;
+        right: 28.25em;
         width: 3em;
         height: 3em;
         background-color: brown;
     }
 
     .lemon::before {
-        top: 1.5em;
-        right: 4.1em;
+        top: 1.8em;
+        right: 23.4em;
         width: 3em;
         height: 3em;
         background-color: lemonchiffon;
