@@ -27,6 +27,7 @@
             position: absolute;
             width: 60px;
             height: 30px;
+            border-radius: 50%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -49,7 +50,7 @@
         const w = button.offsetWidth;
         const h = button.offsetHeight;
         const buttonDiagonal = Math.sqrt(w * w + h * h);
-        const orbitRadius = circle.offsetWidth / 1.5 - (buttonDiagonal / 1.5);
+        const orbitRadius = circle.offsetWidth / 1.35 - (buttonDiagonal / 1.35);
 
         let angle = 0;
 
