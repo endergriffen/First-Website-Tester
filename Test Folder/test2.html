@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reversing Moving Button</title>
+    <title>Endless Bouncing Button</title>
     <style>
         body {
             margin: 0;
@@ -20,7 +20,7 @@
 
         .moving-button {
             position: absolute;
-            top: -18px; /* vertically centers the button over the line. */
+            top: -18px; /* vertically centers the button */
             left: 0;
             transform: translateX(0);
         }
@@ -28,8 +28,8 @@
 </head>
 <body>
 
-    <h1>Back-and-Forth Button</h1>
-    <p>The button moves right, then left, then resets to the right side and repeats:</p>
+    <h1>Bouncing Button</h1>
+    <p>The button below bounces endlessly across the line:</p>
 
     <div class="long-line">
         <button class="moving-button">Click Me</button>
@@ -40,23 +40,26 @@
         const line = document.querySelector('.long-line');
         let position = 0;
         let direction = 1; // 1 = right, -1 = left
+        const speed = 2;
 
         function animate() {
             const lineWidth = line.offsetWidth;
             const buttonWidth = button.offsetWidth;
 
-            position += direction * 2;
+            // Move the button
+            position += direction * speed;
 
+            // Change direction if we hit the edges
+            if (position >= lineWidth - buttonWidth) {
+                position = lineWidth - buttonWidth;
+                direction = -1;
+            } else if (position <= 0) {
+                position = 0;
+                direction = 1;
+            }
+
+            // Apply the transform
             button.style.transform = `translateX(${position}px)`;
-
-            if (direction === 1 && position >= lineWidth - buttonWidth) {
-                direction = -1; // Reverse to left
-            }
-
-            if (direction === -1 && position <= 0) {
-                position = lineWidth - buttonWidth; // Reset to right side
-                direction = 1; // Start moving right again
-            }
 
             requestAnimationFrame(animate);
         }
