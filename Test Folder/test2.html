@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Moving Button on Line</title>
+    <title>Reversing Moving Button</title>
     <style>
         body {
             margin: 0;
@@ -20,43 +20,48 @@
 
         .moving-button {
             position: absolute;
-            top: -18px; /* aligns the button vertically centered on the line */
+            top: -18px; /* vertically centers the button over the line */
             left: 0;
             transform: translateX(0);
-            transition: transform 0.1s linear;
         }
     </style>
 </head>
 <body>
 
-    <h1>Moving Button Example</h1>
-    <p>The button below moves along the horizontal line forever:</p>
+    <h1>Back-and-Forth Button</h1>
+    <p>The button moves right, then left, then resets to the right side and repeats:</p>
 
     <div class="long-line">
         <button class="moving-button">Click Me</button>
     </div>
 
     <script>
-    const button = document.querySelector('.moving-button');
-    let position = 0;
-    let direction = 1;
+        const button = document.querySelector('.moving-button');
+        const line = document.querySelector('.long-line');
+        let position = 0;
+        let direction = 1; // 1 = right, -1 = left
 
-    function animate() {
-      position += direction * 2; // speed (pixels per frame)
-      button.style.transform = `translateX(${position}px)`;
+        function animate() {
+            const lineWidth = line.offsetWidth;
+            const buttonWidth = button.offsetWidth;
 
-      // Reset position if the button goes off the right side
-      const maxWidth = document.querySelector('.long-line').offsetWidth;
-      const buttonWidth = button.offsetWidth;
+            position += direction * 2;
 
-      if (position > maxWidth - buttonWidth) {
-        position = 0;
-      }
+            button.style.transform = `translateX(${position}px)`;
 
-      requestAnimationFrame(animate);
-    }
+            if (direction === 1 && position >= lineWidth - buttonWidth) {
+                direction = -1; // Reverse to left
+            }
 
-    animate(); // Start the animation
+            if (direction === -1 && position <= 0) {
+                position = lineWidth - buttonWidth; // Reset to right side
+                direction = 1; // Start moving right again
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate(); // Start the animation
     </script>
 
 </body>
