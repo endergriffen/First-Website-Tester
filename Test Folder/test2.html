@@ -46,10 +46,10 @@
         const button = document.querySelector('.orbit-button');
         const circle = document.querySelector('.circle-container');
 
-        const circleRadius = circle.offsetWidth / 2; // radius of the whole circle including border
-        const buttonRadius = button.offsetWidth / 2; // half width of the button for centering
-
-        const orbitRadius = circleRadius - buttonRadius; // perfect orbit along the outer edge
+        const w = button.offsetWidth;
+        const h = button.offsetHeight;
+        const buttonDiagonal = Math.sqrt(w * w + h * h);
+        const orbitRadius = circle.offsetWidth / 2 - (buttonDiagonal / 2);
 
         let angle = 0;
 
